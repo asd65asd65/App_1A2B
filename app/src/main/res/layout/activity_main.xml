@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#0BB"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RL1"
+        android:layout_alignParentTop="true">
+
+        <EditText
+            android:id="@+id/ans1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/BtnSub"
+            android:layout_alignBottom="@+id/BtnSub"
+            android:layout_toStartOf="@+id/BtnSub"
+            android:gravity="center"
+            android:inputType="number"
+            android:onClick="editClick"
+            android:orientation="vertical"
+            android:text="輸入答案"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/BtnSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="確定"
+            android:textSize="24sp"
+            android:textAllCaps="false"
+            android:onClick="input1"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RL2"
+        android:layout_below="@+id/RL1"
+        android:layout_above="@+id/RL3">
+
+        <TextView
+            android:id="@+id/ans2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="36sp"
+            android:background="#099"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/RL3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/RL4">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="說明:A代表數字對位置也對，B代表數字對位置不對。"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RL4"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/Btn2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="新遊戲"
+            android:textSize="24sp"
+            android:textAllCaps="false"
+            android:onClick="NewGame"/>
+
+        <Button
+            android:id="@+id/Btn3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="設定"
+            android:textSize="24sp"
+            android:textAllCaps="false"
+            android:onClick="GameSet"/>
+
+        <Button
+            android:id="@+id/Btn4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="離開"
+            android:textSize="24sp"
+            android:textAllCaps="false"
+            android:onClick="ExitGame"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
